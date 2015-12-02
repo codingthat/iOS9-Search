@@ -19,7 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self setUpCoreSpotlight];
+    
+    if ([CSSearchableItemAttributeSet class])
+        [self setUpCoreSpotlight];
+    //Check for iOS version that supports CoreSpotlight API
+    
     return YES;
 }
 
